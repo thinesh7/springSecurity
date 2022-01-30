@@ -1,13 +1,10 @@
-package com.learn.entity.security;
+package com.learn.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Author  : Thinesh
@@ -23,6 +20,7 @@ public class UserAuth {
 
     @Id
     @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
     @Column(name = "USERNAME")
     private String userName;
@@ -31,6 +29,6 @@ public class UserAuth {
     @Column(name = "IS_ACTIVE")
     private Boolean isActive;
     @Column(name = "ROLE")
-    private String role;
+    private String roles;
 
 }

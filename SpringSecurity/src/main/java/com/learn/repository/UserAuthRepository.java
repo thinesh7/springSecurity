@@ -1,10 +1,10 @@
-package com.learn.repository.security;
+package com.learn.repository;
 
-import com.learn.entity.security.UserAuth;
+import com.learn.entity.UserAuth;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
 public interface UserAuthRepository extends JpaRepository<UserAuth, Long> {
 
-    Optional<UserAuth> getUserAuthByUserName(String username);
+    Optional<UserAuth> findByUserName(String username);
 }
